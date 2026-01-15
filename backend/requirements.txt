@@ -6,8 +6,10 @@ pydantic==2.10.5
 pydantic-settings==2.7.1
 
 # ML/DL Models (CPU-safe defaults)
-torch==2.5.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
-torchvision==0.20.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
+# Install PyTorch CPU from official index
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1
+torchvision==0.20.1
 ultralytics==8.3.64
 opencv-python-headless==4.10.0.84
 pillow==11.1.0
