@@ -1,0 +1,7 @@
+{
+  "name": "CulinaryLens",
+  "description": "AAA-class Cognitive Culinary Intelligence System using Gemini Vision for fridge-to-recipe automation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
