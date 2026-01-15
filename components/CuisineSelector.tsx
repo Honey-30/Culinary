@@ -140,9 +140,10 @@ export const CuisineSelector: React.FC<Props> = ({ detectedIngredients, onGenera
                 {selectionMode === 'chef' ? (
                    <motion.div 
                      key="chef"
-                     initial={{ opacity: 0, height: 0 }}
-                     animate={{ opacity: 1, height: 'auto' }}
-                     exit={{ opacity: 0, height: 0 }}
+                     initial={{ opacity: 0, y: 20 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     exit={{ opacity: 0, y: -20 }}
+                     transition={{ duration: 0.3 }}
                      className="bg-gradient-to-br from-gold/5 to-amber-500/5 rounded-2xl p-8 border border-gold/20 flex flex-col items-center text-center"
                    >
                       <Sparkles className="w-12 h-12 text-gold mb-4 animate-pulse" />
@@ -154,9 +155,10 @@ export const CuisineSelector: React.FC<Props> = ({ detectedIngredients, onGenera
                 ) : (
                    <motion.div 
                      key="manual"
-                     initial={{ opacity: 0 }}
-                     animate={{ opacity: 1 }}
-                     exit={{ opacity: 0 }}
+                     initial={{ opacity: 0, y: 20 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     exit={{ opacity: 0, y: -20 }}
+                     transition={{ duration: 0.3 }}
                      className="grid grid-cols-2 md:grid-cols-3 gap-3"
                    >
                       {detectedIngredients.map((item, idx) => {
